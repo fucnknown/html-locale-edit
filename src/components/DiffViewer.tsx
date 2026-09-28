@@ -19,7 +19,7 @@ interface DiffViewerProps {
 
 export function DiffViewer({ result, onCopyHtml, hasCopied }: DiffViewerProps) {
   //const [activeTab, setActiveTab] = useState<'scripts' | 'full' | 'preview'>('scripts');
-  const [activeTab, setActiveTab] = useState<'preview'>('preview');
+  const [activeTab, setActiveTab] = useState<'full' | 'preview'>('preview');
   const [selectedScriptId, setSelectedScriptId] = useState<number | 'all'>('all');
 
   const filteredScripts = useMemo(() => {
